@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <title>Alisson Moura — Desenvolvedor Full Stack</title>
+    <meta
+      name="description"
+      content="Desenvolvedor Full Stack em Curitiba. TypeScript, React, Next.js, Node e Postgres. Sistemas em produção, APIs de IA e aplicações multi-tenant."
+    />
+    <meta name="author" content="Alisson Moura" />
+    <meta name="theme-color" content="#0b0f14" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Alisson Moura — Desenvolvedor Full Stack" />
+    <meta
+      property="og:description"
+      content="Sistemas em produção, APIs de IA e aplicações multi-tenant. TypeScript, React, Next.js, Node e Postgres."
+    />
+    <meta property="og:locale" content="pt_BR" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      // Applies the stored theme before first paint, avoiding a flash of the wrong theme.
+      ;(function () {
+        try {
+          var stored = localStorage.getItem('theme')
+          var theme =
+            stored === 'light' || stored === 'dark'
+              ? stored
+              : window.matchMedia('(prefers-color-scheme: light)').matches
+                ? 'light'
+                : 'dark'
+          document.documentElement.dataset.theme = theme
+        } catch (e) {
+          document.documentElement.dataset.theme = 'dark'
+        }
+      })()
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
